@@ -37,11 +37,11 @@ jobs:
               shell: bash
               env:
                 PACKAGE: ghcr.io/${{ github.repository_owner }}/buildpacks/jkutner_ngrok
-            # - id: register
-            #   name: Register Buildpack
-            #   uses: docker://ghcr.io/buildpacks/actions/registry/request-add-entry:4.0.0
-            #   with:
-            #     token:   ${{ secrets.PUBLIC_REPO_TOKEN }}
-            #     id:      jkutner/web-tty
-            #     version: ${{ steps.package.outputs.version }}
-            #     address: ${{ steps.package.outputs.address }}
+            - id: register
+              name: Register Buildpack
+              uses: docker://ghcr.io/buildpacks/actions/registry/request-add-entry:4.0.0
+              with:
+                token:   ${{ secrets.PUBLIC_REPO_TOKEN }}
+                id:      jkutner/ngrok
+                version: ${{ steps.package.outputs.version }}
+                address: ${{ steps.package.outputs.address }}
