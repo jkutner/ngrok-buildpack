@@ -15,7 +15,7 @@ fi
 install_ngrok() {
   # create a layer for ngrok
   local ngrok_layer=$layers_dir/ngrok
-  mkdir -p $ngrok_layer
+  mkdir -p $ngrok_layer/profile.d
 
   echo "Installing ngrok"
   curl --silent -o $ngrok_layer/ngrok.zip -L "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
