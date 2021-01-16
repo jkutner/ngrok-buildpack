@@ -26,13 +26,13 @@ You can also set the `NGROK_OPTIONS` environment variable at runtime to apply cu
 
 ## Example: ssh
 
-You can you use the ngrok buildpack with the [sshd buildpack]() to expose an SSH server to the internet. Put the following in your `.ngrok2/ngrok.yml`
+You can you use the ngrok buildpack with the [sshd buildpack](https://github.com/jkutner/sshd-buildpack) to expose an SSH server to the internet. Put the following in your `.ngrok2/ngrok.yml`
 
 ```yaml
 tunnels:
   ssh:
     proto: tcp
-    addr: 22
+    addr: 2222
 ```
 
 Then build your app
