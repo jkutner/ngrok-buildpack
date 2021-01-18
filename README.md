@@ -1,5 +1,7 @@
 # ngrok Buildpack
 
+![Version](https://img.shields.io/badge/dynamic/json?url=https://cnb-registry-api.herokuapp.com/api/v1/buildpacks/jkutner/ngrok&label=Version&query=$.latest.version)
+
 This is a [Cloud Native Buildpack](https://buildpacks.io) for [ngrok](https://ngrok.com). It can be used to creare secure tunnels into your container that are available on the public internet.
 
 ## Usage
