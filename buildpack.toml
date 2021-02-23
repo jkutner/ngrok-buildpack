@@ -2,10 +2,14 @@ api = "0.4"
 
 [buildpack]
 id = "jkutner/ngrok"
-version = "0.1.0"
+version = "0.1.1"
 name = "ngrok Buildpack"
 homepage = "https://github.com/jkutner/ngrok-buildpack"
 description = "Configures and runs ngrok in a container"
+keywords = ["ngrok", "ssh", "tunnel"]
+
+[[buildpack.licenses]]
+type = "MIT"
 
 [[stacks]]
 id = "io.buildpacks.stacks.bionic"
