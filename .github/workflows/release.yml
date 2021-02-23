@@ -21,7 +21,7 @@ jobs:
                 password: ${{ secrets.GHCR_TOKEN }}
             - id: setup-pack
               name: Setup Pack
-              uses: buildpacks/github-actions/setup-pack@v4.0.0
+              uses: buildpacks/github-actions/setup-pack@v4.1.0
             - id: package
               name: Package Buildpack
               run: |
@@ -39,7 +39,7 @@ jobs:
                 PACKAGE: ghcr.io/${{ github.repository_owner }}/buildpacks/jkutner_ngrok
             - id: register
               name: Register Buildpack
-              uses: docker://ghcr.io/buildpacks/actions/registry/request-add-entry:4.0.0
+              uses: docker://ghcr.io/buildpacks/actions/registry/request-add-entry:4.1.0
               with:
                 token:   ${{ secrets.PUBLIC_REPO_TOKEN }}
                 id:      jkutner/ngrok
